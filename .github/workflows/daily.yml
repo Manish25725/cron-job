@@ -1,0 +1,15 @@
+name: Daily Job
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Daily Message
+        run: echo "Daily backup completed"
